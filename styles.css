@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* outline: 1px solid black; */
+}
+
+section{
+    padding: 100px 200px;
+}
+
+/* Hero */
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* max-height: 100vh; */
+    display: flex;
+    align-items: center;
+    background-color: #323647;
+    padding-bottom: 0;
+    overflow: hidden
+    /* background:;
+    background-size: ;
+    background-position: ;
+    background-attachment: ; */
+}
+.main .content{
+    max-width: 1000px;
+    z-index: 1;
+}
+.main .content h2{
+    color :#fff;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main .content h2 span{
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+
+.bill-hero{
+    position: absolute;
+    max-width: 700px;
+    bottom: 0;
+    left: 45vw;
+    z-index: 0; 
+}
+.animated-text{
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.animated-text h3{
+    color: #4e9eff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;   
+}
+
+.animated-text h3:nth-child(1){
+    animation: text-move 10s infinite;
+}
+
+@keyframes text-move{
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -70px;
+    }
+    50%{
+        margin-top: -140px  ;
+    }
+    75%{
+        margin-top: -70px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.btn{
+    color: #fff;
+    background: #3a6cf4;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    background: #235bf6;
+}
+
+.media-icons{
+    margin-top: 50px;
+}
+
+.media-icons a{
+    color: #fff;
+    font-size: 3rem;
+    margin-right: 30px;
+}
+
+/* Header */
+header{
+    z-index: 999;
+    position: fixed;
+    background: rgba(255,255,255,0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+header.sticky{
+    background: #1a1d27;
+    padding: 10px 200px;
+}
+header.sticky .navigation a:hover{
+    color: #3a6cf4;
+}
+
+header .brand{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+header .navigation a:hover{
+    color : #3a6cf4;
+}
+
+body{
+    min-height: 110vh;
+}
+
+/* Title */
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title{
+    position: relative;
+    color: #3a6cf4;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+.section-title:before{
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    width: 140px;
+    height: 4px;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+}
+
+.section-title:after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+}
+
+/* About */
+.about .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about .content .col-left{
+    position: relative;
+    width: 45%;
+}
+.about .content .col-right{
+    position: relative;
+    width: 50%;
+}
+.about .content .col-left .img-card{
+    position: relative;
+    width: 100%;
+    max-height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about .content .col-left .img-card img{
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .content .col-right .content-title{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.about .content .col-right .paragraph-text{
+    font-size: 1rem;
+}
+
+/* Work */
+.work{
+    background: #323647;
+}
+
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.work .content .card{
+
+    width: 340px;
+    margin: 20px;
+}
+.work .content .card .card-img{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.work .content .card .card-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+.work .content .card .card-img .text-img:hover + img{
+    transform: scale(1.2);
+    filter: blur(50px);
+}
+.work .content .card .card-img .text-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 260px;
+    width: 340px;
+    opacity: 0;
+    padding: 5px;
+    z-index: 1;
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.work .content .card .card-img .text-img p,
+.work .content .card .card-img .text-img h2{
+    text-align: center;
+    color: white;
+}
+.work .content .card .card-img .text-img:hover{
+    opacity: 1;
+}
+
+/* Skills */
+.skills .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.title p{
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+}
+
+.skills .content .card{
+    background: #fff;
+    width: 340px;
+    margin: 10px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+}
+.skills .content .card .skills-icon{
+    color: #3a6cf4;
+    font-size: 5rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.skills .content .card:hover .skills-icon{
+    transform: translateY(-10px);
+}
+
+.skills .content .card .info{
+    text-align: center;
+}
+.skills .content .card .info h3{
+    color: #3a6cf4;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+/* footer */
+.footer{
+    background: #323647;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+.footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.contact-icons a i{
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 20px 10px;
+}
+.menu-btn,
+.menu-btnx{
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1040px){
+    header{
+        padding: 10px 20px;
+    }
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        z-index: 888;
+        display: flex;
+        font-size: 4rem;
+        width: 100vw;
+        left: 0;
+        top: 65px;
+        position: fixed;
+        background: #474B5A;
+        justify-content: center;
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    }
+    header .navigation.active a{
+        font-size: 1rem;
+        margin: 10px;
+    }
+    header .navigation.active.sticky{
+        background: #1a1d27;
+        padding: 25px;
+    }
+
+    header .menu-btn{
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+    }
+    .menu-btn.active{
+        z-index: 999;
+    }
+    .bill-hero{
+        left: 10vw;
+    }
+    /* Section Responsive */
+    section{
+        padding: 80px 20px;
+    }
+    .main .content h2{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .main .content h2 span{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .animated-text h3{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .about .content{
+        flex-direction: column;
+    }
+    .about .content .column{
+        position: relative;
+        width: 100%;
+    }
+
+    .about .content .col-right .content-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+}
+
+.scrolltop-btn{
+    z-index: 999;
+    position: fixed;
+    background: #1a1d27;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+
+}
+
+.reveal{
+    /* position: relative; */
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
